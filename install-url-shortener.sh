@@ -34,13 +34,13 @@ pip install gunicorn && echo "Gunicorn is Installed" >> $Log
 deactivate && echo "Python venv Deactivated" >> $Log
 
 #Copy the run script to bin
-cp "$Pathofvenv"run-url-shortener.sh /bin/run-url-shortener.sh && echo "Script 'run-url-shortener.sh' Installed" >> $Log
+cp "$Pathofvenv/"run-url-shortener.sh /bin/run-url-shortener.sh && echo "Script 'run-url-shortener.sh' Installed" >> $Log
 
 #Chmod the script to Executable
 chmod +x /bin/run-url-shortener.sh && echo "Script 'run-url-shortener.sh' Executable" >> $Log
 
 #Copy the systemd service to the rest of the services
-cp "$Pathofvenv"url-shortener.service /etc/systemd/system/url-shortener.service && echo "Service 'url-shortener.service' Installed" >> $Log
+cp "$Pathofvenv/"url-shortener.service /etc/systemd/system/url-shortener.service && echo "Service 'url-shortener.service' Installed" >> $Log
 
 #Enable the service
 systemctl enable url-shortener && echo "Service 'url-shortener.service' Enabled" >> $Log

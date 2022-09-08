@@ -31,7 +31,7 @@ timestamp(){
 log(){
     #First arugment is the text to log
     Text=$1
-    printf "`timestamp` || $Text" >> $LogFile
+    printf "`timestamp` || $Text\n" >> $LogFile
 }
 
 #function to create a user
