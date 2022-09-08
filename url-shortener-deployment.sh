@@ -85,9 +85,9 @@ initstatus(){
     #Install Screenfetch
     apt-get install screenfetch -y && log "Installed Screenfetch"
     #Log url-shortener Status
-    log "\n$(systemctl status url-shortener --no-pager)"
+    log "$(echo ; systemctl status url-shortener --no-pager)"
     #Log Screenfetch
-    log "\n$(screenfetch)"
+    log "$(echo ; screenfetch)"
 }
 
 #init everything

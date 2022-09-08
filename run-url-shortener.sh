@@ -16,7 +16,7 @@ fi
 source $Pathofvenv"/bin/activate" && echo "Python venv Activated" >> $Log
 
 #Run the Flask App
-cd $Pathofvenv && gunicorn --bind 0.0.0.0:80 wsgi:app && cd ..
+cd $Pathofvenv"/url-shortener" && gunicorn --bind 0.0.0.0:80 wsgi:app && cd .. && echo "Ran App" >> $Log
 
 #Deactivate the venv
 deactivate && echo "Python venv Deactivated" >> $Log
