@@ -2,7 +2,7 @@
 
 #This script is to run the url-shortener flask app
 
-Log="/root/Run.log"
+Log="Url Shortener Run.log"
 
 Pathofvenv='/root/venv'
 
