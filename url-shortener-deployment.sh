@@ -72,13 +72,13 @@ initinstall(){
     apt-get install git -y && log "Git is Installed"
 
     #Clone the Repo
-    git clone https://github.com/RichardDeodutt/End-to-End.git && log "Cloned Repo"
+    cd /root/ && git clone https://github.com/RichardDeodutt/End-to-End.git && mv /root/End-to-End /root/venv && cd - && log "Cloned Repo"
 
     #Change directory in to the cloned repo and run the install script and change directory back out
     cd End-to-End && /bin/bash install-url-shortener.sh && cd .. && log "Ran 'install-url-shortener.sh'"
 
     #Log Jenkins Creation
-    log "Url-Shotener Init"
+    log "Url-Shortener Init"
 }
 
 initstatus(){
