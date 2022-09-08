@@ -75,7 +75,7 @@ initinstall(){
     cd /root/ && git clone https://github.com/RichardDeodutt/End-to-End.git && mv /root/End-to-End /root/venv && cd - && log "Cloned Repo"
 
     #Change directory in to the cloned repo and run the install script and change directory back out
-    cd End-to-End && /bin/bash install-url-shortener.sh && cd .. && log "Ran 'install-url-shortener.sh'"
+    cd /root/venv && /bin/bash install-url-shortener.sh && cd - && log "Ran 'install-url-shortener.sh'"
 
     #Log Jenkins Creation
     log "Url-Shortener Init"
@@ -85,9 +85,9 @@ initstatus(){
     #Install Screenfetch
     apt-get install screenfetch -y && log "Installed Screenfetch"
     #Log url-shortener Status
-    log '\n'+"$(systemctl status url-shortener --no-pager)"
+    log "\n$(systemctl status url-shortener --no-pager)"
     #Log Screenfetch
-    log '\n'+"$(screenfetch)"
+    log "\n$(screenfetch)"
 }
 
 #init everything
