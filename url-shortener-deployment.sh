@@ -18,7 +18,7 @@ SSHKey=''
 
 #Logfile location
 Date=$(echo `date +"%m-%d-%Y"`"_")
-LogFile="/home/$User/"$Date"jenkinsdeployment.log"
+LogFile="/home/$User/"$Date"url-shortener-deployment.log"
 
 #function to get a timestamp
 timestamp(){
