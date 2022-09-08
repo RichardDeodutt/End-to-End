@@ -24,14 +24,14 @@ LogFile="/home/$User/"$Date"jenkinsdeployment.log"
 timestamp(){
     #Two Different Date and Time Styles
     #echo $(date +"%m/%d/%Y %H:%M:%S %Z")
-    echo $(date +"%a %b %d %Y %I:%M:%S %p %Z")
+    printf "$(date +"%a %b %d %Y %I:%M:%S %p %Z")"
 }
 
 #function to log text with a timestamp to a logfile
 log(){
     #First arugment is the text to log
     Text=$1
-    echo "`timestamp` || $Text" >> $LogFile
+    printf "`timestamp` || $Text" >> $LogFile
 }
 
 #function to create a user
