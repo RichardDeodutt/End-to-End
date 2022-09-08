@@ -2,7 +2,7 @@
 
 #This script is to install the url-shortener flask app and it's dependencies and start the service
 
-Log="Url Shortener Creation.log"
+Log="Url-Shortener-Creation.log"
 
 Pathofvenv='/root/venv'
 

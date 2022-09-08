@@ -2,7 +2,7 @@
 
 #This script is to install cypress and it's dependencies
 
-Log="Cypress Creation.log"
+Log="Cypress-Creation.log"
 
 Pathofvenv='/root/venv'
 
