@@ -21,6 +21,9 @@ apt-get install git -y && echo "Git is Installed" >> $Log && apt-get install def
 #Npm Install
 cd $KuraTestRepo && npm install --unsafe-perm=true --allow-root && cd - && echo "Npm Install Run" >> $Log
 
+#npm install cypress --save-dev
+cd $KuraTestRepo && npm install cypress --save-dev && cd - && echo "Npm Install Cypress Run" >> $Log
+
 #successful
 echo "Installation successful" >> $Log
 exit 0
