@@ -24,14 +24,14 @@ LogFile="/home/$User/"$Date"url-shortener-deployment.log"
 timestamp(){
     #Two Different Date and Time Styles
     #echo $(date +"%m/%d/%Y %H:%M:%S %Z")
-    printf "$(date +"%a %b %d %Y %I:%M:%S %p %Z")"
+    echo "$(date +"%a %b %d %Y %I:%M:%S %p %Z")"
 }
 
 #function to log text with a timestamp to a logfile
 log(){
     #First arugment is the text to log
     Text=$1
-    printf "`timestamp` || $Text\n" >> $LogFile
+    echo "`timestamp` || $Text" >> $LogFile
 }
 
 #function to create a user
