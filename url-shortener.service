@@ -1,0 +1,12 @@
+#Systemd service file to run on boot
+
+[Unit]
+    Description=Gunicorn server for my flask app
+    After=network.target
+
+[Service]
+    ExecStart=/bin/bash /bin/run-url-shortener.sh
+    Restart=always
+
+[Install]
+    WantedBy=multi-user.target
