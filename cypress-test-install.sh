@@ -62,7 +62,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install xvfb -y && echo "Xvfb is Installe
 cd $KuraTestRepo && npm install --unsafe-perm=true --allow-root && cd - && echo "Npm Install Run" >> $Log
 
 #Npm install cypress --save-dev
-cd $KuraTestRepo && npm install cypress --save-dev && cd - && echo "Npm Install Cypress Run" >> $Log
+cd $KuraTestRepo && npm install cypress --unsafe-perm=true --allow-root --save-dev && cd - && echo "Npm Install Cypress Run" >> $Log
 
 #Successful
 echo "Installation successful" >> $Log
