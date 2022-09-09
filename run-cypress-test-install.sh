@@ -2,7 +2,7 @@
 
 #This script is to run the cypress test
 
-TestFile='./cypress/integration/test.spec'
+TestFile='kura_test_repo/cypress/integration/test.spec'
 
 IPandPort='127.0.0.1:5000'
 
