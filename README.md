@@ -9,7 +9,7 @@ I took it a step further and tried to automate as much as I could with what I kn
     - Create or use an existing Ubuntu EC2 to run the Flask App URL Shortener
 
 - ### Task 2: 
-    - One another machine preferably and with good specifications install the following packages or make sure it's installed: 
+    - On another machine preferably and with good specifications install the following packages or make sure it's installed: 
         - git
         - nodejs
         - npm
@@ -94,3 +94,33 @@ Example below:
 [cypress-test-install.sh](https://github.com/RichardDeodutt/End-to-End/blob/main/cypress-test-install.sh) is the script to install cypress and all it's dependencies for the testing. 
 
 [run-cypress-test-install.sh](https://github.com/RichardDeodutt/End-to-End/blob/main/run-cypress-test-install.sh) is the script to run the cypress test after everything is prepared. 
+
+## Task Questions
+
+- #### Did the test work? If not then why?
+    - The **test failed** because the website title is **"URL Shortener"** and it only passes if it's **"url shortener"** according to the testfile [kura_test_repo/cypress/integration/test.spec.js](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/cypress/integration/test.spec.js) after our last edit to the that file. 
+
+- #### Are there files of the test saved somewhere?
+    - Yes, the files are stored in...
+
+- #### How did you correct the test?
+    - This the can be corrected by changing `.should("equal", "url shortener")` to `.should("equal", "URL Shortener")` like it was previously in the test file [kura_test_repo/cypress/integration/test.spec.js](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/cypress/integration/test.spec.js) which will match the actual title of the website. 
+
+## Issues
+
+Mac users with an **arm64 architecture on Linux can't use the `8.7.0` version of cypress** that is in the [package.json](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/package.json). 
+
+This is the link to the [Git Issue](https://github.com/cypress-io/cypress/issues/4478)
+
+To fix this issue you need to change the cypress version in [package.json](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/package.json) from `"cypress": "^8.7.0"` to `"cypress": "^10.2.0"`.
+
+Then delete the `nodes_modules` folder to be able rebuild the app. 
+
+When that is done run the commands below to rebuild it: 
+
+- `npm install` 
+- `npm install cypress --save-dev` 
+
+After that you need to migrate the files to the updated version by running `npx cypress open` and following the migration tool gui to update the files to the latest standards. 
+
+Once done the migration is completed everything is done and the cypress test can be run. 
