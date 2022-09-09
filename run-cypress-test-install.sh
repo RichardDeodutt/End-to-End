@@ -2,7 +2,7 @@
 
 #This script is to run the cypress test
 
-TestFile='./cypress/integration/test.spec'
+TestFile='./cypress/integration/test.spec.js'
 
 Log="Cypress-Run.log"
 
