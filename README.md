@@ -34,7 +34,7 @@ I took it a step further and tried to automate as much as I could with what I kn
         - In `.should("equal", "URL Shortener")` Change "URL Shortener" to "url shortener". 
 
 - ### Task 4: 
-    - Run the following command to do the test: 
+    - In the kura_test_repo run the following command to do the test: 
         `npx cypress run --spec "./cypress/integration/test.spec.js"` 
 
 ## Instructions For Setting up the Url Shortener
@@ -114,24 +114,24 @@ This is the link to the [Git Issue](https://github.com/cypress-io/cypress/issues
 
 To fix this issue you need to change the cypress version in [package.json](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/package.json) from `"cypress": "^8.7.0"` to `"cypress": "^10.2.0"`.
 
-Then delete the `nodes_modules` folder to be able to rebuild the app. 
+Then in the kura_test_repo delete the `nodes_modules` folder to be able to rebuild the app. 
 
 Example below: 
 
 - `sudo rm -r nodes_modules`
 
-When that is done run the commands below to rebuild it: 
+When that is done in the same directory run the commands below to rebuild it: 
 
 - `npm install` 
 - `npm install cypress --save-dev` 
 
-After that you need to migrate the files to the updated version by running `npx cypress open` and following the migration tool gui to update the files to the latest standards. 
+After that you need to migrate the files to the updated version by running the `npx cypress open` command in the kura_test_repo and following the migration tool gui to update the files to the latest standards. 
 
 Example below: 
 
 - `npx cypress open`
 
-Once done the migration is completed everything is done and the cypress test can be run but the test file is renamed to **test.cy.js**
+Once done the migration is completed then everything is done and the cypress test can be run in the kura_test_repo but the test file is renamed to **test.cy.js**
 
 Example below: 
 
