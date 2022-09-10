@@ -35,7 +35,7 @@ I took it a step further and tried to automate as much as I could with what I kn
 
 - ### Task 4: 
     - Run the following command to do the test: 
-        `npx cypress run –-spec "./cypress/integration/test.spec.js"` 
+        `npx cypress run --spec "./cypress/integration/test.spec.js"` 
 
 ## Instructions For Setting up the Url Shortener
 
