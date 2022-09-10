@@ -114,7 +114,11 @@ This is the link to the [Git Issue](https://github.com/cypress-io/cypress/issues
 
 To fix this issue you need to change the cypress version in [package.json](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/package.json) from `"cypress": "^8.7.0"` to `"cypress": "^10.2.0"`.
 
-Then delete the `nodes_modules` folder to be able rebuild the app. 
+Then delete the `nodes_modules` folder to be able to rebuild the app. 
+
+Example below: 
+
+- `sudo rm -r nodes_modules`
 
 When that is done run the commands below to rebuild it: 
 
@@ -123,4 +127,12 @@ When that is done run the commands below to rebuild it:
 
 After that you need to migrate the files to the updated version by running `npx cypress open` and following the migration tool gui to update the files to the latest standards. 
 
-Once done the migration is completed everything is done and the cypress test can be run. 
+Example below: 
+
+- `npx cypress open`
+
+Once done the migration is completed everything is done and the cypress test can be run but the test file is renamed to **test.cy.js**
+
+Example below: 
+
+- `npx cypress run --spec "./cypress/integration/test.cy.js"`
