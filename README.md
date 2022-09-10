@@ -67,7 +67,7 @@ Then run the [cypress-test-install.sh](https://github.com/RichardDeodutt/End-to-
 
 Example below:
 
-`./cypress-test-install.sh`
+`sudo ./cypress-test-install.sh`
 
 After that edit the file [kura_test_repo/cypress/integration/test.spec.js](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/cypress/integration/test.spec.js) to the requirments for testing on your testing machine. 
 
@@ -101,7 +101,7 @@ Example below:
     - The **test failed** because the website title is **"URL Shortener"** and it only passes if it's **"url shortener"** according to the testfile [kura_test_repo/cypress/integration/test.spec.js](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/cypress/integration/test.spec.js) after our last edit to the that file. 
 
 - #### Are there files of the test saved somewhere?
-    - Yes, the files are stored in...
+    - Yes, there is a screenshot stored in the `./cypress/screenshots/test.spec.js/` folder and a video stored in the `./cypress/videos/` folder for the failed run. When it ran successfully there was only a video in the `./cypress/videos/` folder. 
 
 - #### How did you correct the test?
     - This the can be corrected by changing `.should("equal", "url shortener")` to `.should("equal", "URL Shortener")` like it was previously in the test file [kura_test_repo/cypress/integration/test.spec.js](https://github.com/RichardDeodutt/End-to-End/blob/main/kura_test_repo/cypress/integration/test.spec.js) which will match the actual title of the website. 
